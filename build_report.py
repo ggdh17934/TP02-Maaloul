@@ -17,14 +17,16 @@ def main():
     grouped={m:[r for r in runs if r['method']==m] for m in ['full','chunks','dask']}
     if not all(grouped.values()): raise ValueError('All three methods must have recorded outcomes.')
     labels={'full':'Standard Pandas','chunks':'Pandas Chunking','dask':'Dask DataFrame'}
+    colors={'full':'#e6550d','chunks':'#2b8cbe','dask':'#41ab5d'}
     figures=ROOT/'figures'; figures.mkdir(exist_ok=True)
     success=[m for m in grouped if any(r['status']=='success' for r in grouped[m])]
     medians=[statistics.median(r['operation_seconds'] for r in grouped[m] if r['status']=='success') for m in success]
     low=[min(r['operation_seconds'] for r in grouped[m] if r['status']=='success') for m in success]
     high=[max(r['operation_seconds'] for r in grouped[m] if r['status']=='success') for m in success]
     fig,ax=plt.subplots(figsize=(8,4.5),layout='constrained')
-    bars=ax.bar([labels[m] for m in success],medians,color=['#2b8cbe','#41ab5d','#756bb1'][:len(success)],yerr=[[a-b for a,b in zip(medians,low)],[a-b for a,b in zip(high,medians)]],capsize=6)
-    for bar,value in zip(bars,medians): ax.text(bar.get_x()+bar.get_width()/2,value,f'{value:.1f}s',ha='center',va='bottom')
+    bars=ax.bar([labels[m] for m in success],medians,color=[colors[m] for m in success],yerr=[[a-b for a,b in zip(medians,low)],[a-b for a,b in zip(high,medians)]],capsize=6)
+    for bar,value,upper in zip(bars,medians,high): ax.text(bar.get_x()+bar.get_width()/2,upper+max(high)*.025,f'{value:.1f}s',ha='center',va='bottom')
+    ax.set_ylim(0,max(high)*1.15)
     ax.set_ylabel('Read + aggregation time (seconds)'); ax.set_title('Successful full-input runs: median and range'); ax.grid(axis='y',alpha=.2); ax.set_axisbelow(True)
     fig.savefig(figures/'execution_time.png',dpi=160); plt.close(fig)
     fig,ax=plt.subplots(figsize=(8,4.5),layout='constrained')
@@ -36,7 +38,7 @@ def main():
     fig,ax=plt.subplots(figsize=(9,4.5),layout='constrained')
     for method,group in grouped.items():
         with (ROOT/group[0]['profile']['samples_file']).open(newline='',encoding='utf-8') as f: samples=list(csv.DictReader(f))
-        ax.plot([float(x['elapsed_seconds']) for x in samples],[int(x['process_tree_rss_bytes'])/1024**3 for x in samples],label=labels[method],linewidth=1.4)
+        ax.plot([float(x['elapsed_seconds']) for x in samples],[int(x['process_tree_rss_bytes'])/1024**3 for x in samples],label=labels[method],color=colors[method],linewidth=1.4)
     ax.set_xlabel('Worker wall-clock time including imports (seconds)'); ax.set_ylabel('Sampled process-tree RSS (GiB)'); ax.set_title('Memory traces: first recorded full-input run'); ax.legend(); ax.grid(alpha=.2)
     fig.savefig(figures/'memory_over_time.png',dpi=160); plt.close(fig)
     dask_run=next(r for r in grouped['dask'] if r['status']=='success'); graph=dask_run['graph']
@@ -46,7 +48,7 @@ def main():
     axes[0].set_title('Actual Dask task graph size'); axes[0].set_ylabel('Tasks')
     for i,value in enumerate([graph['tasks_before'],graph['tasks_after']]): axes[0].text(i,value,str(value),ha='center',va='bottom')
     axes[1].axis('off')
-    for y,text in [(.8,f'CSV: {graph["partitions"]} byte partitions'),(.5,'Partition statistics: rows, sums, counts'),(.2,'Tree reduction -> one small result')]:
+    for y,text in [(.8,f'CSV: {graph["partitions"]} partitions'),(.5,'Partition statistics: rows, sums, counts'),(.2,'Tree reduction -> one small result')]:
         axes[1].text(.5,y,text,ha='center',va='center',bbox={'boxstyle':'round,pad=.7','facecolor':'#e5f5e0','edgecolor':'#238b45'},fontsize=10)
     for start,end in [(.71,.58),(.41,.28)]: axes[1].annotate('',xy=(.5,end),xytext=(.5,start),arrowprops={'arrowstyle':'->','lw':1.5})
     axes[1].set_title('Execution structure (schematic)')
