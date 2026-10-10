@@ -1,0 +1,65 @@
+{
+  "method": "chunks",
+  "csv": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+  "status": "success",
+  "memory_limit": {
+    "mechanism": "Windows Job Object",
+    "limit_kind": "per-process committed allocation",
+    "limit_bytes": 2147483648
+  },
+  "imports_complete": true,
+  "all_columns_loaded": true,
+  "aggregation": {
+    "rows": 11000000,
+    "metrics": {
+      "label": {
+        "sum": 5829123.0,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.5299202727272727
+      },
+      "lepton_pt": {
+        "sum": 10906124.279428393,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.9914658435843994
+      },
+      "m_jj": {
+        "sum": 11377193.344061658,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 1.0342903040056053
+      },
+      "m_wwbb": {
+        "sum": 10557931.867310852,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.9598119879373501
+      }
+    }
+  },
+  "chunk_count": 110,
+  "chunksize": 100000,
+  "max_chunk_rows": 100000,
+  "operation_seconds": 43.459196700001485,
+  "completed_utc": "2026-10-10T20:58:40Z",
+  "run": 2,
+  "exit_code": 0,
+  "run_configuration": {
+    "input_path": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+    "input_bytes": 8035497980,
+    "memory_gib": 2.0,
+    "threads": 4,
+    "blocksize": "64MiB",
+    "code_sha256": "eb48e39c6a4fe9210a7ba1f04099fd5a340d21ce3b655ff659b8e9686e3eb8ce"
+  },
+  "profile": {
+    "end_to_end_seconds": 44.58365369999956,
+    "peak_process_tree_rss_bytes": 189145088,
+    "peak_process_tree_private_bytes": 692736000,
+    "minimum_system_available_bytes": 11501490176,
+    "sample_interval_seconds": 0.2,
+    "samples_file": "results/full/chunks_run2_memory.csv",
+    "notes": "RSS is sampled, includes imports; summed child RSS can double-count shared pages. One interpreter worker with Dask threads; Windows may add a small Python launcher process."
+  }
+}

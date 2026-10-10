@@ -1,0 +1,12 @@
+{
+  "input_above_5_gib": true,
+  "all_three_methods_recorded": true,
+  "traditional_outcome": "oom",
+  "traditional_exception": "MemoryError",
+  "controlled_allocation_limit_gib": 2.0,
+  "chunksize_100000": true,
+  "lazy_dask_and_optimization_recorded": true,
+  "time_and_rss_profiled": true,
+  "numerical_validation_passed": true,
+  "github_published": "See SUBMISSION_AR.md"
+}

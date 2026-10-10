@@ -1,0 +1,481 @@
+{
+  "method": "dask",
+  "csv": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+  "status": "success",
+  "memory_limit": {
+    "mechanism": "Windows Job Object",
+    "limit_kind": "per-process committed allocation",
+    "limit_bytes": 2147483648
+  },
+  "imports_complete": true,
+  "all_columns_loaded": true,
+  "aggregation": {
+    "rows": 11000000,
+    "metrics": {
+      "label": {
+        "sum": 5829123.0,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.5299202727272727
+      },
+      "lepton_pt": {
+        "sum": 10906124.279428393,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.9914658435843994
+      },
+      "m_jj": {
+        "sum": 11377193.344061658,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 1.0342903040056053
+      },
+      "m_wwbb": {
+        "sum": 10557931.867310852,
+        "valid_count": 11000000,
+        "missing_count": 0,
+        "mean": 0.9598119879373501
+      }
+    }
+  },
+  "build_seconds": 0.027858400004333816,
+  "compute_seconds": 17.814157600005274,
+  "blocksize": "64MiB",
+  "threads": 4,
+  "graph": {
+    "partitions": 119,
+    "tasks_before": 494,
+    "tasks_after": 137,
+    "expression_before": "MapPartitions(partition_stats).sum(split_every=8)",
+    "expression_after": "TreeReduce(read-_to_string_dtype-partition_stats-chunk, kind=Sum, split_every=8)",
+    "sample_before": {
+      "nodes": [
+        {
+          "id": 0,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 0)"
+        },
+        {
+          "id": 1,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 1)"
+        },
+        {
+          "id": 2,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 2)"
+        },
+        {
+          "id": 3,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 3)"
+        },
+        {
+          "id": 4,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 4)"
+        },
+        {
+          "id": 5,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 5)"
+        },
+        {
+          "id": 6,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 6)"
+        },
+        {
+          "id": 7,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 7)"
+        },
+        {
+          "id": 8,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 8)"
+        },
+        {
+          "id": 9,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 9)"
+        },
+        {
+          "id": 10,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 10)"
+        },
+        {
+          "id": 11,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 11)"
+        },
+        {
+          "id": 12,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 12)"
+        },
+        {
+          "id": 13,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 13)"
+        },
+        {
+          "id": 14,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 1, 14)"
+        },
+        {
+          "id": 15,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 2, 0)"
+        },
+        {
+          "id": 16,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 2, 1)"
+        },
+        {
+          "id": 17,
+          "key": "('sum-tree-42d546a3b0e22256d1178df562cbd412', 0)"
+        },
+        {
+          "id": 18,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 0)"
+        },
+        {
+          "id": 19,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 1)"
+        },
+        {
+          "id": 20,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 2)"
+        },
+        {
+          "id": 21,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 3)"
+        },
+        {
+          "id": 22,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 4)"
+        },
+        {
+          "id": 23,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 5)"
+        },
+        {
+          "id": 24,
+          "key": "('chunk-74b3ac0776aa755b7931e5a926defc71', 6)"
+        }
+      ],
+      "edges": [
+        [
+          23,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          22,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          24,
+          0
+        ],
+        [
+          21,
+          0
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "shown_tasks": 25,
+      "total_tasks": 494
+    },
+    "sample_after": {
+      "nodes": [
+        {
+          "id": 0,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 0)"
+        },
+        {
+          "id": 1,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 1)"
+        },
+        {
+          "id": 2,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 2)"
+        },
+        {
+          "id": 3,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 3)"
+        },
+        {
+          "id": 4,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 4)"
+        },
+        {
+          "id": 5,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 5)"
+        },
+        {
+          "id": 6,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 6)"
+        },
+        {
+          "id": 7,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 7)"
+        },
+        {
+          "id": 8,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 8)"
+        },
+        {
+          "id": 9,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 9)"
+        },
+        {
+          "id": 10,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 10)"
+        },
+        {
+          "id": 11,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 11)"
+        },
+        {
+          "id": 12,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 12)"
+        },
+        {
+          "id": 13,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 13)"
+        },
+        {
+          "id": 14,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 1, 14)"
+        },
+        {
+          "id": 15,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 2, 0)"
+        },
+        {
+          "id": 16,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 2, 1)"
+        },
+        {
+          "id": 17,
+          "key": "('sum-tree-843ec83da5797b4d9da07dcaeb63c170', 0)"
+        },
+        {
+          "id": 18,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 0)"
+        },
+        {
+          "id": 19,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 1)"
+        },
+        {
+          "id": 20,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 2)"
+        },
+        {
+          "id": 21,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 3)"
+        },
+        {
+          "id": 22,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 4)"
+        },
+        {
+          "id": 23,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 5)"
+        },
+        {
+          "id": 24,
+          "key": "('read-_to_string_dtype-partition_stats-chunk-77991a148616fd807c00d98eccf56809', 6)"
+        }
+      ],
+      "edges": [
+        [
+          24,
+          0
+        ],
+        [
+          21,
+          0
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          22,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "shown_tasks": 25,
+      "total_tasks": 137
+    }
+  },
+  "operation_seconds": 17.84271059999446,
+  "completed_utc": "2026-10-10T20:57:36Z",
+  "run": 1,
+  "exit_code": 0,
+  "run_configuration": {
+    "input_path": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+    "input_bytes": 8035497980,
+    "memory_gib": 2.0,
+    "threads": 4,
+    "blocksize": "64MiB",
+    "code_sha256": "eb48e39c6a4fe9210a7ba1f04099fd5a340d21ce3b655ff659b8e9686e3eb8ce"
+  },
+  "profile": {
+    "end_to_end_seconds": 19.01878040000156,
+    "peak_process_tree_rss_bytes": 919212032,
+    "peak_process_tree_private_bytes": 1486626816,
+    "minimum_system_available_bytes": 10539778048,
+    "sample_interval_seconds": 0.2,
+    "samples_file": "results/full/dask_run1_memory.csv",
+    "notes": "RSS is sampled, includes imports; summed child RSS can double-count shared pages. One interpreter worker with Dask threads; Windows may add a small Python launcher process."
+  }
+}

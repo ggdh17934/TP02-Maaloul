@@ -1,0 +1,36 @@
+{
+  "method": "full",
+  "csv": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+  "status": "oom",
+  "memory_limit": {
+    "mechanism": "Windows Job Object",
+    "limit_kind": "per-process committed allocation",
+    "limit_bytes": 2147483648
+  },
+  "imports_complete": true,
+  "all_columns_loaded": true,
+  "exception_type": "MemoryError",
+  "error": "Unable to allocate 256. KiB for an array with shape (32768,) and data type float64",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\University\\TP2-MALOUL\\worker.py\", line 30, in main\n    record.update(pipeline.run_full(args.csv))\n                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"E:\\University\\TP2-MALOUL\\pipeline.py\", line 44, in run_full\n    frame = pd.read_csv(path, **options)  # Task 1: intentionally load all rows at once.\n  File \"E:\\University\\TP2-MALOUL\\.venv\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 872, in read_csv\n    return _read(filepath_or_buffer, kwds)\n  File \"E:\\University\\TP2-MALOUL\\.venv\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 306, in _read\n    return parser.read(nrows)\n           ~~~~~~~~~~~^^^^^^^\n  File \"E:\\University\\TP2-MALOUL\\.venv\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 1950, in read\n    ) = self._engine.read(  # type: ignore[attr-defined]\n        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        nrows\n        ^^^^^\n    )\n    ^\n  File \"E:\\University\\TP2-MALOUL\\.venv\\Lib\\site-packages\\pandas\\io\\parsers\\c_parser_wrapper.py\", line 238, in read\n    chunks = self._reader.read_low_memory(nrows)\n  File \"pandas/_libs/parsers.pyx\", line 832, in pandas._libs.parsers.TextReader.read_low_memory\n  File \"pandas/_libs/parsers.pyx\", line 911, in pandas._libs.parsers.TextReader._read_rows\n  File \"pandas/_libs/parsers.pyx\", line 1009, in pandas._libs.parsers.TextReader._convert_column_data\n  File \"pandas/_libs/parsers.pyx\", line 1048, in pandas._libs.parsers.TextReader._convert_tokens\n  File \"pandas/_libs/parsers.pyx\", line 1193, in pandas._libs.parsers.TextReader._convert_with_dtype\n  File \"pandas/_libs/parsers.pyx\", line 1658, in pandas._libs.parsers._try_double\nnumpy._core._exceptions._ArrayMemoryError: Unable to allocate 256. KiB for an array with shape (32768,) and data type float64\n",
+  "operation_seconds": 47.05990739999834,
+  "completed_utc": "2026-10-10T20:56:31Z",
+  "run": 1,
+  "exit_code": 2,
+  "run_configuration": {
+    "input_path": "E:\\University\\TP2-MALOUL\\data\\raw\\HIGGS.csv",
+    "input_bytes": 8035497980,
+    "memory_gib": 2.0,
+    "threads": 4,
+    "blocksize": "64MiB",
+    "code_sha256": "eb48e39c6a4fe9210a7ba1f04099fd5a340d21ce3b655ff659b8e9686e3eb8ce"
+  },
+  "profile": {
+    "end_to_end_seconds": 48.32002260000445,
+    "peak_process_tree_rss_bytes": 1615396864,
+    "peak_process_tree_private_bytes": 2135515136,
+    "minimum_system_available_bytes": 10123911168,
+    "sample_interval_seconds": 0.2,
+    "samples_file": "results/full/full_run1_memory.csv",
+    "notes": "RSS is sampled, includes imports; summed child RSS can double-count shared pages. One interpreter worker with Dask threads; Windows may add a small Python launcher process."
+  }
+}

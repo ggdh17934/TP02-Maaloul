@@ -1,0 +1,19 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7",
+  "python_executable": "E:\\University\\TP2-MALOUL\\.venv\\Scripts\\python.exe",
+  "physical_cores": 10,
+  "logical_processors": 16,
+  "ram_total_bytes": 34194739200,
+  "ram_available_bytes_at_start": 10495332352,
+  "packages": {
+    "pandas": "3.0.6",
+    "dask": "2026.8.0",
+    "distributed": "2026.8.0",
+    "psutil": "7.2.2",
+    "matplotlib": "3.11.2",
+    "pyarrow": "26.0.0",
+    "numpy": "2.5.4"
+  },
+  "captured_utc": "2026-10-10T20:55:35Z"
+}

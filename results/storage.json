@@ -1,0 +1,17 @@
+{
+  "component_bytes": {
+    ".venv": 364076357,
+    "data": 11010686444,
+    "release": 2902134713,
+    "results": 182422,
+    "archive": 76564,
+    "tmp": 260161,
+    "figures": 245186,
+    "report": 9320
+  },
+  "root_file_bytes": 351363,
+  "total_bytes_excluding_git": 14278022530,
+  "free_disk_bytes": 263591497728,
+  "captured_utc": "2026-10-10T21:00:55Z",
+  "note": "Logical bytes; rounded storage figure excludes the small Git repository."
+}

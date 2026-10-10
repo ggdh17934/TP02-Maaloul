@@ -1,0 +1,38 @@
+{
+  "Reason": "Replaced generated Flight Prices downloads with verified complete HIGGS data; old measurement logs retained.",
+  "RemovedBytes": 42933375260.0,
+  "Removed": [
+    {
+      "Path": "data\\raw\\itineraries.csv",
+      "Bytes": 31091834438
+    },
+    {
+      "Path": "data\\downloads\\flightprices.zip",
+      "Bytes": 5920770411
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part001",
+      "Bytes": 1073741824
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part002",
+      "Bytes": 1073741824
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part003",
+      "Bytes": 1073741824
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part004",
+      "Bytes": 1073741824
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part005",
+      "Bytes": 1073741824
+    },
+    {
+      "Path": "archive\\flightprices_previous\\release\\flightprices.zip.part006",
+      "Bytes": 552061291
+    }
+  ]
+}

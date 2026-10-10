@@ -1,0 +1,12 @@
+test_all_missing_column_mean_is_none (test_pipeline.PipelineTests.test_all_missing_column_mean_is_none) ... ok
+test_memory_limit_causes_real_memoryerror (test_pipeline.PipelineTests.test_memory_limit_causes_real_memoryerror) ... ok
+test_missing_required_column_rejected (test_pipeline.PipelineTests.test_missing_required_column_rejected) ... ok
+Dask: 2 partitions; 9 -> 3 tasks; 2 threads
+test_three_methods_match_across_partitions (test_pipeline.PipelineTests.test_three_methods_match_across_partitions) ... ok
+test_unequal_chunks_and_missing_values (test_pipeline.PipelineTests.test_unequal_chunks_and_missing_values) ... ok
+test_wrong_result_is_rejected (test_pipeline.PipelineTests.test_wrong_result_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.385s
+
+OK

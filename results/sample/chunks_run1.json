@@ -1,0 +1,65 @@
+{
+  "method": "chunks",
+  "csv": "E:\\University\\TP2-MALOUL\\data\\samples\\first_100003.csv",
+  "status": "success",
+  "memory_limit": {
+    "mechanism": "Windows Job Object",
+    "limit_kind": "per-process committed allocation",
+    "limit_bytes": 2147483648
+  },
+  "imports_complete": true,
+  "all_columns_loaded": true,
+  "aggregation": {
+    "rows": 100003,
+    "metrics": {
+      "label": {
+        "sum": 52835.0,
+        "valid_count": 100003,
+        "missing_count": 0,
+        "mean": 0.5283341499755008
+      },
+      "lepton_pt": {
+        "sum": 99038.51642227173,
+        "valid_count": 100003,
+        "missing_count": 0,
+        "mean": 0.9903554535591105
+      },
+      "m_jj": {
+        "sum": 103263.85262196511,
+        "valid_count": 100003,
+        "missing_count": 0,
+        "mean": 1.0326075479932113
+      },
+      "m_wwbb": {
+        "sum": 95923.09971934557,
+        "valid_count": 100003,
+        "missing_count": 0,
+        "mean": 0.9592022211268219
+      }
+    }
+  },
+  "chunk_count": 2,
+  "chunksize": 100000,
+  "max_chunk_rows": 100000,
+  "operation_seconds": 0.39917309999873396,
+  "completed_utc": "2026-10-10T20:55:39Z",
+  "run": 1,
+  "exit_code": 0,
+  "run_configuration": {
+    "input_path": "E:\\University\\TP2-MALOUL\\data\\samples\\first_100003.csv",
+    "input_bytes": 73052987,
+    "memory_gib": 2.0,
+    "threads": 4,
+    "blocksize": "64MiB",
+    "code_sha256": "eb48e39c6a4fe9210a7ba1f04099fd5a340d21ce3b655ff659b8e9686e3eb8ce"
+  },
+  "profile": {
+    "end_to_end_seconds": 1.5415141999983462,
+    "peak_process_tree_rss_bytes": 181891072,
+    "peak_process_tree_private_bytes": 676982784,
+    "minimum_system_available_bytes": 11025031168,
+    "sample_interval_seconds": 0.2,
+    "samples_file": "results/sample/chunks_run1_memory.csv",
+    "notes": "RSS is sampled, includes imports; summed child RSS can double-count shared pages. One interpreter worker with Dask threads; Windows may add a small Python launcher process."
+  }
+}

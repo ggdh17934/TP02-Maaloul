@@ -1,0 +1,15 @@
+{
+  "memory_gib": 2.0,
+  "threads": 4,
+  "blocksize": "64MiB",
+  "chunksize": 100000,
+  "repeats": 1,
+  "methods": [
+    "full",
+    "chunks",
+    "dask"
+  ],
+  "full_input": false,
+  "cache_policy": "No OS cache eviction. Method order alternates; repetitions are warm/mixed-cache runs.",
+  "baseline_policy": "All methods read all 29 numeric columns and compute the same four numeric reductions."
+}
