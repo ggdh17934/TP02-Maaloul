@@ -2,7 +2,7 @@
 
 مشروع Big Data Analytics، ماستر ثانية IA & Data Science، جامعة الوادي، 2026/2027.
 
-[المستودع العام](https://github.com/ggdh17934/TP02-Maaloul) — [التقرير العربي](report/REPORT_AR.md) — [البيانات الكاملة في Release](https://github.com/ggdh17934/TP02-Maaloul/releases/tag/v1.0.0)
+[المستودع العام](https://github.com/ggdh17934/TP02-Maaloul) — [الشرح العربي الشامل](TP02_FULL_DESCRIPTION_AR.md) — [التقرير العربي](report/REPORT_AR.md) — [البيانات الكاملة في Release](https://github.com/ggdh17934/TP02-Maaloul/releases/tag/v1.0.0)
 
 نقارن قراءة CSV كاملًا بواسطة Pandas، القراءة بدفعات 100,000 صف، والتنفيذ الكسول والمتوازي بواسطة Dask. الكود والنتائج والتقرير والتكليف في مستودع واحد؛ ملفات البيانات الكبيرة تُحمّل إلى مجلد المشروع ولا تدخل تاريخ Git.
 
@@ -20,7 +20,7 @@
 
 Windows 64-bit وPython 3.13. لا نحتاج SQL Server أو قاعدة بيانات منفصلة؛ البيانات جدول CSV. تم تثبيت المكتبات المطلوبة داخل `.venv`: pandas وdask[complete] وpsutil وmatplotlib وpyarrow؛ الإصدارات مثبتة في requirements.txt.
 
-الحد الأدنى للبيانات المضغوطة والمفكوكة معًا 10.94GB. خصص **15GB** للبيئة والنتائج والمساحة المؤقتة، أو **18GB** إن أردت إنشاء أجزاء Release المحلية أيضًا. البيئة الحالية فقط تُستخدم لهذا المشروع؛ ملفات cache والتجارب داخل tmp/. لا توجد رسوم تدريب أو GPU مطلوب.
+الحد الأدنى للبيانات المضغوطة والمفكوكة معًا 10.94GB. خصص نحو **20GB مساحة حرة على الأقل** للإعداد من الصفر، أو **25GB مساحة مريحة** مع أجزاء Release؛ يشترط البرنامج هامش 5GiB قبل فك الضغط. الحجم النهائي المقاس مع البيئة والأجزاء نحو 14.28GB. البيئة الحالية فقط تُستخدم لهذا المشروع؛ ملفات cache والتجارب داخل tmp/. لا توجد رسوم تدريب أو GPU مطلوب.
 
 ## التشغيل من PowerShell
 
@@ -38,8 +38,7 @@ $env:TMP = $env:TEMP
 .\.venv\Scripts\python.exe build_report.py
 ```
 
-إذا كانت `.venv` موجودة والمكتبات مثبتة، يمكن تشغيل `powershell -ExecutionPolicy Bypass -File .
-un.ps1` لتنفيذ تنزيل البيانات والاختبارات والتجارب وتوليد التقرير. لا ينشر هذا الأمر إلى GitHub.
+إذا كانت `.venv` موجودة والمكتبات مثبتة، يمكن تشغيل `powershell -ExecutionPolicy Bypass -File .\run.ps1` لتنفيذ تنزيل البيانات والاختبارات والتجارب وتوليد التقرير. لا ينشر هذا الأمر إلى GitHub.
 
 لإعادة حساب بصمات ZIP وCSV: `.\.venv\Scripts\python.exe download_data.py verify`.
 
