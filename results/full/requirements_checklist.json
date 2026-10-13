@@ -8,5 +8,9 @@
   "lazy_dask_and_optimization_recorded": true,
   "time_and_rss_profiled": true,
   "numerical_validation_passed": true,
-  "github_published": "See SUBMISSION_AR.md"
+  "github_published": true,
+  "github_repository": "https://github.com/ggdh17934/TP02-Maaloul",
+  "github_release": "https://github.com/ggdh17934/TP02-Maaloul/releases/tag/v1.0.0",
+  "github_visibility": "public",
+  "github_release_assets_verified": true
 }

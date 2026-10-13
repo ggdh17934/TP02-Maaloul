@@ -2,6 +2,8 @@
 
 مشروع Big Data Analytics، ماستر ثانية IA & Data Science، جامعة الوادي، 2026/2027.
 
+[المستودع العام](https://github.com/ggdh17934/TP02-Maaloul) — [التقرير العربي](report/REPORT_AR.md) — [البيانات الكاملة في Release](https://github.com/ggdh17934/TP02-Maaloul/releases/tag/v1.0.0)
+
 نقارن قراءة CSV كاملًا بواسطة Pandas، القراءة بدفعات 100,000 صف، والتنفيذ الكسول والمتوازي بواسطة Dask. الكود والنتائج والتقرير والتكليف في مستودع واحد؛ ملفات البيانات الكبيرة تُحمّل إلى مجلد المشروع ولا تدخل تاريخ Git.
 
 ## البيانات المختارة
@@ -67,6 +69,6 @@ un.ps1` لتنفيذ تنزيل البيانات والاختبارات والت
 
 الـCSV والـZIP والبيئة لا تدخل Git. [GitHub يمنع الملفات العادية الأكبر من 100MiB](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)، و[كل ملف Release يجب أن يكون أصغر من 2GiB](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)، لذلك نجهز أجزاء بحجم أقصى 1GiB دون Git LFS. يستطيع الأستاذ الحصول على نفس النسخة بتشغيل download_data.py دون بيانات اعتماد Kaggle وفق endpoint العام الذي تحققنا منه. المصدر والإصدار والبصمات موثقة. قد يتغير إتاحة endpoint في المستقبل.
 
-لإعداد ملفات بيانات في Release تابع للمستودع نفسه، شغّل `release_data.py split`. لإعادة التجميع بعد تنزيل الأجزاء وmanifest إلى release/: `release_data.py restore` ثم `download_data.py prepare`. تفاصيل المصدر والرخصة في DATASET_AR.md. النشر إلى GitHub خطوة منفصلة، وحالته موثقة في SUBMISSION_AR.md.
+لإعداد ملفات بيانات في Release تابع للمستودع نفسه، شغّل `release_data.py split`. لإعادة التجميع بعد تنزيل الأجزاء وmanifest إلى release/: `release_data.py restore` ثم `download_data.py prepare`. تفاصيل المصدر والرخصة في DATASET_AR.md. نُشر الكود والتقرير والنتائج إلى المستودع العام، والبيانات المضغوطة إلى Release v1.0.0 في المستودع نفسه. تفاصيل التسليم في [SUBMISSION_AR.md](SUBMISSION_AR.md).
 
 كل ملفات المشروع المحلية داخل هذا المجلد على E. التجربة القديمة محفوظة مؤقتًا في archive/ ومستبعدة من Git؛ لا تدخل التقرير الحالي.
